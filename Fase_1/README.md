@@ -19,9 +19,9 @@ Se utilizó el dataset público de Google BigQuery:
 `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022`
 
 **Descripción:**  
-Este dataset contiene más de 100 millones de registros correspondientes a viajes de taxi amarillo en la ciudad de Nueva York durante el año 2022. Incluye información temporal, geográfica, económica y categórica, como fechas de viaje, distancia, tarifas, propinas, método de pago y ubicaciones de origen y destino.
+Este dataset contiene más de 10 millones de registros correspondientes a viajes de taxi amarillo en la ciudad de Nueva York durante el año 2022. Incluye información temporal, geográfica, económica y categórica, como fechas de viaje, distancia, tarifas, propinas, método de pago y ubicaciones de origen y destino.
 
-![Conexion al data set](Fase_1/evidencias/conexion.png)
+![Conexion al data set](evidencias/conexion.png)
 
 _Figura 1. Conexiona al dataset._
 ---
