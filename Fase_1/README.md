@@ -37,16 +37,29 @@ Durante esta fase se desarrollaron consultas SQL en BigQuery para realizar un **
 - Monto total promedio (`total_amount`)
 - Cálculo de medianas mediante `APPROX_QUANTILES`
 
+![Figura2](evidencias/MetricasDescriptivas.png)
+
+_Figura 2. Metricas Descriptivas._
+
 ### 3.2 Análisis de variables categóricas
 - Distribución de viajes por método de pago (`payment_type`)
 - Distribución de viajes por cantidad de pasajeros (`passenger_count`)
 - Comparación de montos y propinas según método de pago
+
+![Figura3](evidencias/DistribucionesVariables.png)
+
+_Figura 3. Distribuciones Variables._
 
 ### 3.3 Patrones temporales
 - Análisis de viajes por mes
 - Análisis de viajes por día de la semana
 - Análisis de viajes por hora del día
 - Identificación de horas pico y patrones de demanda
+
+![Figura4](evidencias/PatronesTemporales.png)
+
+_Figura 4. Patrones Temprales._
+
 
 Todas las consultas se encuentran documentadas y comentadas en los archivos SQL dentro de la carpeta `sql`.
 
@@ -99,5 +112,29 @@ Se desarrolló un informe visual conectado directamente a BigQuery que incluye:
 ---
 
 ## 7. Organización del repositorio
-La estructura del repositorio es la siguiente:
+
+La siguiente estructura presenta la organización de los archivos y carpetas
+utilizados durante el desarrollo de la **Fase 1** del proyecto.
+
+### 📁 Estructura de carpetas
+
+```text
+Fase_1/
+│
+├── evidencias/
+│   ├── capturas de ejecución de consultas en BigQuery
+│   ├── comparación de bytes procesados antes y después de la optimización
+│   └── evidencia de tablas particionadas y clusterizadas
+│
+├── informe/
+│   ├── archivo(s) del informe visual
+│   └── enlaces o documentos relacionados con Google Sheets o Looker Studio
+│
+├── sql/
+│   ├── consultas de métricas descriptivas
+│   ├── análisis de variables categóricas
+│   ├── detección de patrones temporales
+│   └── scripts de creación de tablas optimizadas (particiones y clustering)
+│
+└── README.md
 
