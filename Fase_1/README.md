@@ -68,6 +68,10 @@ Todas las consultas se encuentran documentadas y comentadas en los archivos SQL 
 ## 4. Técnicas de optimización aplicadas
 Para reducir el costo de procesamiento y mejorar el rendimiento de las consultas, se implementaron las siguientes técnicas:
 
+![Figura5](evidencias/CreacionSchema.png)
+
+_Figura 5. Creacion de Schema._
+
 ### 4.1 Tablas derivadas
 Se creó una tabla derivada en el proyecto personal del equipo a partir del dataset original, seleccionando únicamente las columnas necesarias para el análisis.
 
