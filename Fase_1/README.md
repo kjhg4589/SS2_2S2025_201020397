@@ -75,6 +75,12 @@ _Figura 5. Creacion de Schema._
 ### 4.1 Tablas derivadas
 Se creó una tabla derivada en el proyecto personal del equipo a partir del dataset original, seleccionando únicamente las columnas necesarias para el análisis.
 
+
+![Figura6](evidencias/CreacionSubset.png)
+
+_Figura 6. Creacion de subset._
+
+
 ### 4.2 Particionamiento
 - Partición aplicada por fecha (`pickup_datetime` o `data_file_month`)
 - Permite reducir el volumen de datos escaneados en consultas temporales
@@ -84,6 +90,11 @@ Se creó una tabla derivada en el proyecto personal del equipo a partir del data
   - `pickup_location_id`
   - `dropoff_location_id`
 - Optimiza consultas que filtran o agrupan por ubicación
+
+![Figura7](evidencias/ParticionesClustering.png)
+
+_Figura 7. Creacion de Particiones Y Clusterin._
+
 
 ### 4.4 Comparación de costos
 Se documentó la diferencia de **bytes procesados antes y después** de aplicar particiones y clustering, evidenciando una reducción significativa en el costo de las consultas.
