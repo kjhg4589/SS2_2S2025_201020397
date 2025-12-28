@@ -127,14 +127,14 @@ Entre los principales hallazgos se identificaron:
 ---
 
 ## 6. Informe visual
-Se desarrolló un informe visual conectado directamente a BigQuery que incluye:
 
-- Viajes por mes
-- Distribución de métodos de pago
-- Promedio de tarifas por hora
+El análisis exploratorio se complementó con un informe visual interactivo
+desarrollado en Google Looker Studio, conectado directamente a BigQuery.
 
-🔗 **Enlace al informe visual:**  
+🔗 **Enlace al informe en Looker Studio:**  
+https://lookerstudio.google.com/reporting/36b6402d-df82-4ca2-ae1d-a49b0f50d2cb
 
+[Ver informe en PDF](informe/Informe_Fase1.pdf)
 
 ---
 
