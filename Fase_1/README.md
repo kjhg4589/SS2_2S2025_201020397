@@ -101,6 +101,18 @@ Se documentó la diferencia de **bytes procesados antes y después** de aplicar 
 
 Las capturas de estas comparaciones se encuentran en la carpeta `Evidencias`.
 
+![Figura8](evidencias/ComparacionMetricasDescriptivas.png)
+
+_Figura 8. Comparacion Metricas Descriptivas._
+
+![Figura9](evidencias/ComparacionDistribucionesVariables.png)
+
+_Figura 9. Comparacion Distribuciones Variables._
+
+![Figura10](evidencias/ComparacionPatronesTemporales.png)
+
+_Figura 10. Comparacion Patrones Temporales._
+
 ---
 
 ## 5. Patrones y hallazgos relevantes
