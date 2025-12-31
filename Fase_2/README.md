@@ -270,16 +270,32 @@ La estructura del repositorio para la Fase 2 es la siguiente:
 ```text
 Fase_2/
 │
-├── sql/
-│   ├── preparacion_datos.sql
-│   ├── entrenamiento_modelo_1.sql
-│   ├── entrenamiento_modelo_2.sql
-│   ├── evaluacion_modelos.sql
-│   └── predicciones.sql
-│
 ├── evidencias/
-│   ├── entrenamiento_modelos.png
-│   ├── metricas_evaluacion.png
-│   └── predicciones.png
+│   ├── Dataset_fase1.png                 # Dataset base proveniente de la Fase 1
+│   ├── DataEntrenamiento.png             # Datos utilizados para entrenamiento
+│   ├── DataTest.png                      # Datos utilizados para prueba
+│   ├── CreacionModelosCost.png           # Evidencia creación modelos de costos
+│   ├── CreacionModelosPayment.png        # Evidencia creación modelos de pago
+│   ├── CreacionEvaluarCost.png           # Ejecución de ML.EVALUATE (costos)
+│   ├── EvaluarCost.png                   # Métricas de evaluación del modelo
+│   ├── ComparacionCosts.png              # Comparación de modelos de costos
+│   └── CreacionPredictCosts.png          # Generación de predicciones
+│
+├── informe/
+│   └── Informe_Fase2.pdf
+│
+├── sql/
+│   ├── F2-1 - Creacion Schema.sql
+│   ├── F2-2-1 - Vistas Total Amount.sql
+│   ├── F2-2-2 - Creacion de Modelos Total Amount.sql
+│   ├── F2-2-3 - Vistas Payment Type.sql
+│   ├── F2-2-4 - Creacion de Modelos Payment Type.sql
+│   ├── F2-2-5 - Training Info de los Modelos.sql
+│   ├── F2-3-1 - Evaluate de Costos.sql
+│   ├── F2-3-2 - Comparacion de Costos.sql
+│   ├── F2-3-3 - Evaluate Payment Type.sql
+│   ├── F2-3-4 - Comparacion de Payment Type.sql
+│   ├── F2-4-1 - Predicciones Costos.sql
+│   └── F2-4-2 - Predicciones Tipo de Pago.sql
 │
 └── README.md
