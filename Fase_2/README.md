@@ -12,7 +12,7 @@
 
 ---
 
-## 2. Objetivo del proyecto
+## 1. Objetivo del proyecto
 El objetivo de esta fase es diseñar, entrenar y evaluar modelos predictivos
 utilizando BigQuery ML sobre el dataset NYC Taxi Trips 2022, con el fin de
 predecir una variable relevante del negocio y contrastar los valores reales
@@ -20,7 +20,7 @@ frente a los valores predichos mediante visualizaciones interactivas.
 
 ---
 
-## 3. Dataset utilizado
+## 2. Dataset utilizado
 Se utilizaron las tablas derivadas y optimizadas creadas en la **Fase 1**,
 particularmente la tabla:
 
@@ -29,9 +29,13 @@ particularmente la tabla:
 La tabla se encuentra particionada por fecha y clusterizada por ubicación,
 permitiendo un procesamiento eficiente y controlado de costos.
 
+![Figura1](evidencias/Dataset_fase1.png)
+
+_Figura 1. Dataset fase 1._
+
 ---
 
-## 4. Definición del problema de predicción
+## 3. Definición del problema de predicción
 
 En esta fase se abordaron dos problemas de predicción complementarios,
 utilizando técnicas de aprendizaje automático implementadas directamente
@@ -56,7 +60,7 @@ toma de decisiones operativas y estratégicas.
 
 ---
 
-## 5. Preparación de los datos
+## 4. Preparación de los datos
 
 Previo al entrenamiento de los modelos predictivos, se realizó un proceso de
 preparación y transformación de los datos con el objetivo de garantizar la
@@ -86,13 +90,22 @@ Las principales actividades realizadas fueron:
   utilizadas durante el entrenamiento.
 
 --- 
-## 6. División de datos (Train / Test)
+## 5. División de datos (Train / Test)
 
 Los datos fueron divididos en conjuntos de entrenamiento y prueba con el fin
 de evaluar el desempeño de los modelos de manera objetiva y reproducible.
 
 - **Entrenamiento:** 80% de los registros  
+
+![Figura2](evidencias/DataEntrenamiento.png)
+
+_Figura 2. Data Para el etrenamiento._
+
 - **Prueba:** 20% de los registros  
+
+![Figura3](evidencias/DataTest.png)
+
+_Figura 3. Dataset para el proceso Test 1._
 
 La estrategia de división utilizada fue **aleatoria controlada**, implementada
 mediante una función hash (`FARM_FINGERPRINT`) aplicada sobre un conjunto de
@@ -107,13 +120,13 @@ conjuntos.
 
 ---
 
-## 7. Modelos implementados
+## 6. Modelos implementados
 
 Para abordar los problemas de predicción definidos, se entrenaron modelos
 utilizando BigQuery ML, seleccionando algoritmos adecuados según la naturaleza
 de cada variable objetivo.
 
-### 7.1 Predicción del costo total del viaje (Regresión)
+### 6.1 Predicción del costo total del viaje (Regresión)
 
 - **Modelo 1: Regresión Lineal (`LINEAR_REG`)**  
   - **Objetivo:** Estimar el costo total del viaje (`total_amount`) a partir de
@@ -129,9 +142,14 @@ de cada variable objetivo.
     mejor desempeño predictivo en problemas de regresión con múltiples
     factores.
 
+
+![Figura4](evidencias/CreacionModelosCost.png)
+
+_Figura 4. Creacion de Modelo Para Costos._
+
 ---
 
-### 7.2 Predicción del método de pago (Clasificación)
+### 6.2 Predicción del método de pago (Clasificación)
 
 - **Modelo 3: Regresión Logística (`LOGISTIC_REG`)**  
   - **Objetivo:** Clasificar el método de pago del viaje, modelado como un
@@ -146,10 +164,13 @@ de cada variable objetivo.
     lineales entre las variables explicativas y el método de pago, permitiendo
     comparar su desempeño frente a un modelo lineal de referencia.
 
+![Figura5](evidencias/CreacionModelosPayment.png)
+
+_Figura 5. Creacion de Modelo Para tipo de Pago._
 
 ---
 
-## 8. Evaluación de modelos
+## 7. Evaluación de modelos
 
 El desempeño de los modelos entrenados fue evaluado utilizando la función
 `ML.EVALUATE` de BigQuery ML, aplicando el mismo conjunto de datos de prueba
@@ -161,6 +182,14 @@ para garantizar una comparación justa entre los modelos.
   - *Mean Absolute Error (MAE)*
   - *Root Mean Squared Error (RMSE)*
   - *R² Score*
+
+![Figura6](evidencias/CreacionEvaluarCost.png)
+
+_Figura 6. Evaluar Costos._
+
+![Figura7](evidencias/EvaluarCost.png)
+
+_Figura 7. tabla con las evaluaciones._
 
 - **Modelos de clasificación (método de pago):**
   - *Accuracy*
@@ -187,9 +216,13 @@ Esta comparación permitió identificar el modelo con mejor desempeño para cada
 problema de predicción, el cual fue seleccionado para la generación de
 predicciones y su posterior visualización.
 
+
+![Figura8](evidencias/ComparacionCosts.png)
+
+_Figura 8. Comparacionde resultados para la prediccion._
 ---
 
-## 9. Modelo seleccionado y justificación
+## 8. Modelo seleccionado y justificación
 Con base en las métricas obtenidas y consideraciones de interpretabilidad
 y desempeño, se seleccionó el modelo:
 
@@ -199,14 +232,19 @@ Este modelo presentó mejores resultados para el problema planteado.
 
 ---
 
-## 10. Generación de predicciones
+## 9. Generación de predicciones
 Se generaron predicciones sobre el conjunto de prueba utilizando
 `ML.PREDICT`, almacenando los resultados en una tabla/vista para su
 posterior análisis y visualización.
 
+
+![Figura9](evidencias/CreacionPredictCosts.png)
+
+_Figura 9. Creacion de prediccion para costos._
+
 ---
 
-## 11. Visualización de resultados
+## 10. Visualización de resultados
 Se desarrolló un tablero interactivo en Google Looker Studio
 que permite:
 
@@ -219,23 +257,14 @@ que permite:
 
 ---
 
-## 12. Hallazgos relevantes
-Entre los principales hallazgos se identificaron:
-
-- (Ejemplo: mejor desempeño del modelo en ciertos rangos horarios)
-- (Ejemplo: mayor error en viajes de larga distancia)
-- (Ejemplo: variables con mayor impacto en la predicción)
-
----
-
-## 13. Consideraciones sobre sesgos y limitaciones
+## 11. Consideraciones sobre sesgos y limitaciones
 Se identifican posibles sesgos en los datos, como variaciones por zona o
 horario, los cuales pueden influir en las predicciones del modelo y deben
 ser considerados al interpretar los resultados.
 
 ---
 
-## 14. Organización del repositorio
+## 12. Organización del repositorio
 La estructura del repositorio para la Fase 2 es la siguiente:
 
 ```text
