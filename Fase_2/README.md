@@ -252,8 +252,8 @@ que permite:
 - Analizar el error del modelo
 - Visualizar el comportamiento de las predicciones por variables relevantes
 
-🔗 **Enlace al tablero:**  
-(Agregar enlace aquí)
+🔗 **Enlace al informe en Looker Studio:**  
+https://lookerstudio.google.com/reporting/bc85c720-05bf-4a4a-ab2e-c0f8cb6dc017
 
 ---
 
